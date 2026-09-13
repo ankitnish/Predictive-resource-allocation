@@ -4,6 +4,9 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const incidentRoutes = require('./routes/incidentRoutes');
+const resourceRoutes = require('./routes/resourceRoutes');
+
+
 
 const { protect } = require('./middleware/authMiddleware');
 const { authorize } = require('./middleware/roleMiddleware');
@@ -21,6 +24,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/incidents', incidentRoutes);
+app.use('/api/resources', resourceRoutes);
 
 app.get('/api/test-protected', protect, (req, res) => {
   res.json({ success: true, message: `Hello user ${req.user.id}, your role is ${req.user.role}` });
