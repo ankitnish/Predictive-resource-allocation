@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const incidentRoutes = require('./routes/incidentRoutes');
 const resourceRoutes = require('./routes/resourceRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
+const areaRoutes = require('./routes/areaRoutes');
 
 
 
@@ -27,6 +28,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/incidents', incidentRoutes);
 app.use('/api/resources', resourceRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/areas', areaRoutes);
 
 app.get('/api/test-protected', protect, (req, res) => {
   res.json({ success: true, message: `Hello user ${req.user.id}, your role is ${req.user.role}` });
