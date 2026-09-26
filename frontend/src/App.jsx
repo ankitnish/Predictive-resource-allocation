@@ -3,6 +3,8 @@ import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import RiskMap from './pages/RiskMap';
+import Incidents from './pages/Incidents';
+import Resources from './pages/Resources';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/map" element={<RiskMap />} />
+          <Route path="/incidents" element={<Incidents />} />
+          <Route path="/resources" element={<Resources />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import Layout from '../components/Layout';
 import { getAreas } from '../services/areaService';
 
 const riskColor = (incidentCount) => {
-  if (incidentCount >= 60) return '#ef5962'; // critical
-  if (incidentCount >= 40) return '#f0a63a'; // high
-  if (incidentCount >= 20) return '#e8d24a'; // medium
-  return '#38d8ec'; // low
+  if (incidentCount >= 60) return '#ef5962';
+  if (incidentCount >= 40) return '#f0a63a';
+  if (incidentCount >= 20) return '#e8d24a';
+  return '#38d8ec';
 };
 
 const riskLabel = (incidentCount) => {
@@ -29,11 +30,11 @@ export default function RiskMap() {
   }, []);
 
   if (error) {
-    return <div className="min-h-screen bg-[#0b111c] text-[#ef5962] p-10">{error}</div>;
+    return <Layout><p className="text-[#ef5962]">{error}</p></Layout>;
   }
 
   return (
-    <div className="min-h-screen bg-[#0b111c] text-[#dce6ef] p-8">
+    <Layout>
       <h1 className="text-2xl font-extrabold mb-1">Risk Map</h1>
       <p className="text-sm text-[#8194a9] mb-6">
         Color-coded by incident volume (a stand-in for risk score until the ML model is integrated in a later module)
@@ -83,6 +84,6 @@ export default function RiskMap() {
           )}
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
