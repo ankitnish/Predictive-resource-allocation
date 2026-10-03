@@ -1,0 +1,13 @@
+population,populationDensity,infrastructureCondition,distanceToHospitalKm,total_incidents,avg_response_time,is_high_risk,name
+34367,1565,1,19.0,42,24.16904761904762,1,Zone A - Montgomery County
+73205,3842,2,10.4,39,26.21282051282051,0,Zone B - County Armagh
+75816,834,4,8.8,52,26.713461538461537,0,Zone C - West Midlands
+63580,1951,5,6.6,42,26.954761904761902,0,Zone D - Monroe County
+16622,6276,5,11.2,58,23.901724137931033,0,Zone E - Grampian
+56514,6784,3,7.5,42,24.51666666666667,0,Zone F - Logan County
+116893,1786,2,18.5,43,25.18372093023256,1,Zone G - Tayside
+53354,759,2,21.0,37,25.410810810810812,0,Zone H - Johnson County
+57261,3245,3,6.5,49,23.675510204081633,1,Zone I - Lawrence County
+29627,4343,5,11.3,42,27.240476190476187,0,Zone J - Lawrence County
+66397,6302,3,21.6,46,25.969565217391303,1,Zone K - Wiltshire
+56827,1226,2,14.2,58,24.82586206896552,1,Zone L - Oxfordshire
